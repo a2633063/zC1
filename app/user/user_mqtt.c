@@ -53,7 +53,7 @@ void ICACHE_FLASH_ATTR user_mqtt_init(void)
     mqtt_info.password = user_config.mqtt_password;
     mqtt_info.will_topic = willtopic;
     mqtt_info.will_message = "0";
-    mqtt_info.keepalive = 20;
+    mqtt_info.keepalive = 5;
     mqtt_info.will_qos = 1;
     mqtt_info.will_retain = 1;
     mqtt_info.clean_session = 0;

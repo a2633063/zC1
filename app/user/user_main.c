@@ -9,6 +9,7 @@
 #include "user_json.h"
 
 user_config_t user_config;
+user_sensor_t user_sensor;
 
 void ICACHE_FLASH_ATTR _ota_result_cb(state_ota_result_state_t b)
 {
@@ -47,7 +48,7 @@ void user_init(void)
     }
 
     zlib_wifi_init(false);
-
+    user_uart_init();
     zlib_web_config_init();
     user_mqtt_init();
     user_json_init();
